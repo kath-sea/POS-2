@@ -1172,25 +1172,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Reset the reservation system
                     resetReservationSystem();
                     
-                    // Close the reservation modal
-                    closeReservationModal();
+                    // Clear any stored cart data
+                    localStorage.removeItem('reservationCart');
                     
                     // Show logout notification
                     showNotification('Successfully logged out!');
                     
-                    // Scroll to top of page to show home section
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Reset home section if needed
-                    if (typeof resetHomeSection === 'function') {
-                        resetHomeSection();
-                    }
-                    
-                    // Ensure body scroll is restored
-                    document.body.style.overflow = 'auto';
+                    // Redirect to home page (landing page)
+                    window.location.href = 'index.html';
                 }
             });
         }
@@ -1230,25 +1219,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset the reservation system
                 resetReservationSystem();
                 
-                // Close the reservation modal
-                closeReservationModal();
+                // Clear any stored cart data
+                localStorage.removeItem('reservationCart');
                 
                 // Show logout notification
                 showNotification('Successfully logged out!');
                 
-                // Scroll to top of page to show home section
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-                
-                // Reset home section if needed
-                if (typeof resetHomeSection === 'function') {
-                    resetHomeSection();
-                }
-                
-                // Ensure body scroll is restored
-                document.body.style.overflow = 'auto';
+                // Redirect to home page (landing page)
+                window.location.href = 'index.html';
             }
         }
     });
